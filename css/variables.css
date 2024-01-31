@@ -1,0 +1,35 @@
+/* ============================== FONTS ============================== */
+
+/* ============================== DM SANS ============================== */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+/* ============================== GOOD TIMES - VAMOS A BAILAR ============================== */
+@font-face {
+    font-family: GoodTimes;
+    src: url(../fonts/good-times-rg.otf);
+}
+
+/* ============================== ASTOUNDER SQUARED LC BB ============================== */
+
+@import url("https://use.typekit.net/ykr8cww.css");
+
+/* ============================== VARIABLES ============================== */
+
+:root {
+    --color--white: #FFFFFF;
+    --color--black: #000000;
+    --color--lightest: #A60321;
+    --color--lighter: #A60311;
+    --color--light: #73020C;
+    --color--medium: #400207;
+    --color--dark: #260104;
+    --color--links--nav: #00CDEF;
+    --color--border--nav: #270765;
+
+    --font--good-times: 'GoodTimes', sans-serif;
+    --font--astounder--lc: "astounder-squared-lc-bb", sans-serif;
+    --font--astounder: "astounder-squared-bb", sans-serif;
+    --font--DM-Sans: 'DM Sans', sans-serif;
+
+    --title--shadow: .2rem .2rem .2rem var(--color--black);
+}

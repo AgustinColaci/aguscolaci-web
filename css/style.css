@@ -1,0 +1,540 @@
+/* ============================== CUSTOM STYLES ============================== */
+body {
+    background-image: url(../images/background-vab.png);
+}
+
+/* ============================== CONTAINER ============================== */
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+/* Media query to target mobile and tablet */
+@media all and (max-width:1140px) {
+    .container {
+        padding-top: 2rem;
+    }
+
+}
+
+/* ============================== HEADER AND NAVBAR ============================== */
+
+.header__title {
+    text-transform: uppercase;
+    font-family: var(--font--astounder--lc);
+    font-weight: 400;
+    font-size: 6rem;
+    text-shadow: var(--title--shadow);
+}
+
+.navbar {
+    margin-bottom: 5rem;
+    justify-content: center;
+}
+
+.navbar .navbar__list {
+    margin-top: 1.6rem;
+    display: flex;
+    justify-content: center;
+    row-gap: 1.2rem;
+    column-gap: 2.4rem;
+    flex-wrap: wrap;
+}
+
+.navbar .link {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color--white);
+    text-shadow: .1rem .1rem .2rem var(--color--black);
+}
+
+.link.link--active {
+    border-bottom: .2rem solid;
+    border-bottom-color: var(--color--border--nav);
+}
+
+/* Media query to target mobile and tablet */
+@media all and (max-width:1140px) {
+    .navbar {
+        margin-bottom: 2rem;
+    }
+
+    .navbar .navbar__list {
+        gap: 1rem;
+    }
+
+    .navbar .link {
+        font-size: 1.2rem;
+    }
+
+}
+
+
+/* ============================== LANZAMIENTOS ============================== */
+
+.lanzamientos {
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portada-vab {
+    height: 40rem;
+    width: 40rem;
+    border: .5rem solid var(--color--white);
+    background-image: url(../images/portada-vab.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 3px 2px 11px -3px rgba(0,0,0,0.87);
+}
+
+.red-pill {
+    background-color: var(--color--lightest);
+    width: 15rem;
+    height: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    margin-bottom: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 2px 11px -3px rgb(255 255 255 / 87%)
+}
+
+.call-to-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.call-to-action__title h2 {
+    font-family: var(--font--good-times);
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-shadow: var(--title--shadow);
+}
+
+
+.call-to-action__button p {
+    background-color: var(--color--black);
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    width: 7rem;
+    height: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.escuchar-ahora .link {
+    display: block;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: .1rem solid var(--color--white);
+    width: 18rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+}
+
+/* Media query to target only mobile */
+@media all and (max-width:750px) {
+    .portada-vab {
+        height: 32rem;
+        width: 32rem;
+        background-repeat: no-repeat;
+    }
+
+    .call-to-action__title h2 {
+        font-size: 2rem;
+    }
+
+    .call-to-action__button p {
+        font-size: 1rem;
+    }
+
+    .lanzamientos {
+        margin-bottom: 2rem;
+    }
+
+    .escuchar-ahora .link {
+        background-color: var(--color--lighter);
+    }
+}
+
+/* ============================== FOOTER ============================== */
+
+.footer {
+    padding-top: 1.2rem;
+    padding-right: 1.2rem;
+    padding-bottom: 1.2rem;
+    padding-left: 1.2rem;
+    width: 100%;
+    background-color: var(--color--black);
+    text-align: center;
+    border-top: .2rem solid var(--color--white);
+    position: fixed;
+    bottom: 0;
+}
+
+.footer__social .footer__social--redes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.links--instagram,
+.links--twitter,
+.links--tiktok,
+.links--spotify,
+.links--youtube,
+.links--twitch {
+    background-repeat: no-repeat;
+    text-indent: -99999px;
+    height: 2rem;
+    width: 2rem;
+    background-size: contain;
+    transition: all .3s ease;
+}
+
+.links--instagram {
+    background-image: url("/icons/instagram--white.svg");
+}
+
+.links--twitter {
+    background-image: url("/icons/twitter--white.png");
+}
+
+.links--tiktok {
+    background-image: url("/icons/tiktok--white.png");
+}
+
+.links--spotify {
+    background-image: url("/icons/spotify--white.svg");
+}
+
+.links--youtube {
+    background-image: url("/icons/youtube--white.svg");
+}
+
+.links--twitch {
+    background-image: url("/icons/twitch--white.png");
+}
+
+/* ============================== BIOGRAFÍA ============================== */
+
+.biografia {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.biografia__img {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: .5rem solid var(--color--white);
+    box-shadow: 3px 2px 11px -3px rgba(0,0,0,0.87);
+}
+
+.biografia__texto {
+    background-color: var(--color--white);
+    color: var(--color--black);
+    padding: 2.4rem;
+    text-align: left;
+    border: .5rem solid var(--color--black);
+    margin: 6rem;
+}
+
+.biografia__texto p,
+.biografia__texto span {
+    color: var(--color--black);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.biografia__texto p {
+    margin-bottom: 1.6rem;
+}
+
+.biografia__texto p:last-child {
+    margin-bottom: 0;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+
+/* Media query to target mobile and tablet */
+@media all and (max-width:1140px) {
+    .biografia__texto {
+        margin: 1.6rem;
+    }
+
+    .biografia__texto p,
+    .biografia__texto span {
+        font-size: 1.4rem;
+    }
+
+    .biografia__img {
+        max-width: 100%;
+    }
+
+}
+/* ============================== DISCOGRAFÍA ============================== */
+
+.discografia {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.discografia div {
+    margin-bottom: 4rem;
+}
+
+.discografia__title {
+    font-size: 4rem;
+    text-align: left;
+    font-family: var(--font--astounder--lc);
+    text-shadow: var(--title--shadow);
+    margin-left: 18rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.discografia__title .categoria.categoria--disco {
+    font-size: 1.2rem;
+    text-shadow: none;
+    background-color: hsla(0,0%,100%,.7);
+    text-transform: uppercase;
+    color: #121212;
+    font-weight: 700;
+    height: 1.6rem;
+    padding: .3rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .2rem;
+}
+
+.body--discografia .footer,
+.body--biografia .footer {
+    position: inherit;
+    margin-top: 5rem;
+}
+
+/* Media query to target mobile and tablet */
+@media all and (max-width:1140px) {
+    .discografia__title {
+        font-size: 2rem;
+        margin-left: 0;
+    }
+
+    .discografia__iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .discografia div {
+        margin-bottom: 0;
+        max-height: 15rem;
+    }
+
+    .discografia__title .categoria.categoria--disco {
+        font-size: 1rem;
+    }
+}
+
+/* ============================== COVERS ============================== */
+
+.covers {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.covers__iframe {
+    max-width: 100%;
+    width: 56rem;
+    height: 31.5rem;
+}
+
+/* Media query to target mobile and tablet */
+@media all and (max-width:1140px) {
+    .covers {
+        margin-left: 1.6rem;
+        margin-right: 1.6rem;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    .covers__iframe {
+        width: 100%;
+        height: 18rem;
+    }
+
+}
+
+/* ============================== CONTACTO ============================== */
+
+.contacto--title {
+    font-size: 4rem;
+    text-align: center;
+    font-family: var(--font--astounder--lc);
+    text-shadow: var(--title--shadow);
+    margin-bottom: 1.2rem;
+}
+
+.contacto__flex {
+    display: flex;
+    justify-content: center;
+}
+
+.contacto__flex--img {
+    background-image: url(../images/foto-show.jpg);
+    background-size: cover;
+    width: 50rem;
+    height: 50rem;
+    border: .5rem solid var(--color--white);
+}
+
+.contacto__flex--redes {
+    border: .5rem solid var(--color--white);
+    border-left: none;
+    padding: 2rem;
+    width: 50rem;
+    height: 50rem;
+    background-image: url(../images/tipito-vab.png);
+    background-color: rgba(255, 255, 255, 0.178);
+    background-size: 52%;
+    background-repeat: no-repeat;
+    background-position: center 6.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contacto__flex--redes .links--instagram,
+.contacto__flex--redes .links--twitter,
+.contacto__flex--redes .links--tiktok,
+.contacto__flex--redes .links--spotify,
+.contacto__flex--redes .links--youtube,
+.contacto__flex--redes .links--twitch {
+    width: 3.4rem;
+    height: 3.4rem;
+}
+
+.contacto__flex--redes  .links--instagram {
+    background-image: url("/icons/instagram-color.png");
+}
+
+.contacto__flex--redes .links--twitter {
+    background-image: url("/icons/twitter-color.png");
+}
+
+.contacto__flex--redes .links--tiktok {
+    background-image: url("/icons/tiktok-color.png");
+}
+
+.contacto__flex--redes .links--spotify {
+    background-image: url("/icons/spotify-color.png");
+}
+
+.contacto__flex--redes .links--youtube {
+    background-image: url("/icons/youtube-color.png");
+}
+
+.contacto__flex--redes .links--twitch {
+    background-image: url("/icons/twitch-color.png");
+}
+
+.title {
+    text-transform: uppercase;
+    font-family: var(--font--astounder--lc);
+    font-weight: 400;
+    font-size: 3.4rem;
+    text-shadow: var(--title--shadow);
+}
+
+.contacto__list {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+/* Media query to target mobile and tablet */
+@media all and (max-width:1140px) {
+    .contacto__flex {
+        flex-direction: column-reverse;
+        border-left: .5rem solid var(--color--white);
+    }
+
+    .contacto__flex {
+        width: calc(100vw - 3.2rem);
+    }
+
+    .contacto__flex--img {
+        display: none;
+    }
+    .contacto__flex--redes {
+        width: 100%;
+        height: 36rem;
+        background-size: 50%;
+        background-position: center 5.2rem;
+
+    }
+
+    .contacto__list {
+        gap: 2rem;
+    }
+    .contacto__flex {
+        margin: 0 auto;
+    }
+
+    .contacto__flex--redes .title {
+        font-size: 2.4rem;
+    }
+
+    .header__title {
+        font-size: 4rem;
+    }
+
+}
+
+/* ============================== SHOWS ============================== */
+
+
+.shows__title {
+    margin-top: 5rem;
+    font-size: 6rem;
+    font-family: var(--font--astounder--lc);
+    text-shadow: var(--title--shadow);
+}
+
+/* Media query to target only desktop */
+@media all and (min-width:1025px) {}

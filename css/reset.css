@@ -1,0 +1,23 @@
+* {
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--color--white);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+li {
+    list-style-type: none;
+}
+
+ol, ul {
+    padding-left: 0;
+}
+
+a, .link {
+    text-decoration: none;
+}
