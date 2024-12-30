@@ -23,7 +23,7 @@ body {
 
 .header__title {
     text-transform: uppercase;
-    font-family: var(--font--astounder--lc);
+    font-family: monospace;
     font-weight: 400;
     font-size: 6rem;
     text-shadow: var(--title--shadow);
@@ -49,6 +49,7 @@ body {
     font-weight: 700;
     color: var(--color--white);
     text-shadow: .1rem .1rem .2rem var(--color--black);
+    font-family: monospace;
 }
 
 .link.link--active {
