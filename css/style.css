@@ -286,6 +286,9 @@ body {
     font-weight: 700;
 }
 
+.carousel-inner {
+    max-height: 60rem;
+}
 
 /* Media query to target mobile and tablet */
 @media all and (max-width:1140px) {
@@ -315,7 +318,7 @@ body {
     margin-bottom: 4rem;
 }
 
-.discografia__title {
+.discografia__title, .shows__item {
     font-size: 4rem;
     text-align: left;
     font-family: var(--font--astounder--lc);
@@ -327,7 +330,8 @@ body {
     gap: .8rem;
 }
 
-.discografia__title .categoria.categoria--disco {
+.discografia__title .categoria.categoria--disco,
+.shows__item--type {
     font-size: 1.2rem;
     text-shadow: none;
     background-color: hsla(0,0%,100%,.7);
@@ -374,6 +378,7 @@ body {
 
 .covers {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 4rem;
 }
@@ -382,6 +387,11 @@ body {
     max-width: 100%;
     width: 56rem;
     height: 31.5rem;
+}
+
+.body--covers .footer {
+    position: inherit;
+    margin-top: 4.8rem;
 }
 
 /* Media query to target mobile and tablet */
@@ -416,8 +426,10 @@ body {
 }
 
 .contacto__flex--img {
-    background-image: url(../images/foto-show.jpg);
+    background-image: url(../images/hab3.JPG);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 50rem;
     height: 50rem;
     border: .5rem solid var(--color--white);
@@ -528,12 +540,30 @@ body {
 
 /* ============================== SHOWS ============================== */
 
-
 .shows__title {
-    margin-top: 5rem;
-    font-size: 6rem;
+    font-size: 4rem;
     font-family: var(--font--astounder--lc);
     text-shadow: var(--title--shadow);
+}
+
+.shows__item {
+    margin-top: 1.2rem;
+    font-size: 4rem;
+    font-family: var(--font--astounder--lc);
+    text-shadow: var(--title--shadow);
+    gap: 2rem;
+    background-image: url(../images/location.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 4rem;
+    background-position: left center;
+    padding-left: 5rem;
+}
+
+.shows__title--anteriores {
+    margin-top: 12rem;
+    border-top: .3rem solid var(--color--white);
+    padding-top: 4rem;
 }
 
 /* Media query to target only desktop */
