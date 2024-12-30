@@ -8,7 +8,7 @@ body {
 .container {
     margin: 0 auto;
     text-align: center;
-    padding-top: 5rem;
+    padding-top: 2.4rem;
 }
 
 /* Media query to target mobile and tablet */
@@ -20,25 +20,43 @@ body {
 }
 
 /* ============================== HEADER AND NAVBAR ============================== */
+.header-black {
+    height: 8rem;
+    background-color: var(--color--black);
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 1.8rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo__img {
+    background-image: url(../images/AgusColaci-Logo-White.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    height: auto;
+    width: 50rem;
+    text-indent: -999.9rem;
+}
 
 .header__title {
     text-transform: uppercase;
-    font-family: monospace;
+    font-family: var(--font--astounder--lc);
     font-weight: 400;
     font-size: 6rem;
     text-shadow: var(--title--shadow);
+    margin-bottom: 2rem;
 }
 
 .navbar {
-    margin-bottom: 5rem;
-    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 .navbar .navbar__list {
-    margin-top: 1.6rem;
     display: flex;
-    justify-content: center;
-    row-gap: 1.2rem;
     column-gap: 2.4rem;
     flex-wrap: wrap;
 }
@@ -49,7 +67,7 @@ body {
     font-weight: 700;
     color: var(--color--white);
     text-shadow: .1rem .1rem .2rem var(--color--black);
-    font-family: monospace;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .link.link--active {
@@ -59,18 +77,34 @@ body {
 
 /* Media query to target mobile and tablet */
 @media all and (max-width:1140px) {
-    .navbar {
-        margin-bottom: 2rem;
-    }
-
     .navbar .navbar__list {
         gap: 1rem;
+        margin-bottom: 0;
     }
 
     .navbar .link {
         font-size: 1.2rem;
     }
 
+}
+
+/* Media query to target only mobile */
+@media all and (max-width:750px) {
+    .header-black {
+        height: auto;
+        padding: 1.2rem;
+        flex-direction: column;
+    }
+
+    .logo__img {
+        min-height: 4rem;
+        background-position: center;
+        width: auto;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
 }
 
 
@@ -193,11 +227,30 @@ body {
     bottom: 0;
 }
 
+.footer__logo {
+    background-image: url(../images/AC-Logo-White.svg);
+    background-repeat: no-repeat;
+    text-indent: -999.9rem;
+    height: 4rem;
+    width: 5rem;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .footer__social .footer__social--redes {
+    margin-bottom: 0;
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-bottom: 1.2rem;
+}
+
+.footer_copy p {
+    margin-bottom: 0;
+    font-size: 1.2rem;
 }
 
 .links--instagram,
@@ -236,6 +289,21 @@ body {
 
 .links--twitch {
     background-image: url("/icons/twitch--white.png");
+}
+
+/* Media query to target only mobile */
+@media all and (max-width:750px) {
+    .footer {
+        margin-top: 2rem;
+        position: inherit;
+    }
+
+    .footer__social {
+        flex-direction: column;
+        gap: 1.2rem;
+        padding-bottom: 2rem;
+    }
+
 }
 
 /* ============================== BIOGRAFÍA ============================== */
@@ -569,3 +637,13 @@ body {
 
 /* Media query to target only desktop */
 @media all and (min-width:1025px) {}
+
+/* Media query to target only mobile */
+@media all and (max-width:750px) {
+    .shows__item {
+        margin-left: 1.2rem;
+        padding-left: 2.2rem;
+        font-size: 2rem;
+        background-size: 2rem;
+    }
+}

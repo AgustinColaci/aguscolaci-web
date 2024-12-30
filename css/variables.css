@@ -13,6 +13,17 @@
 
 @import url("https://use.typekit.net/ykr8cww.css");
 
+/* ============================== NEWTON HOWARD - LOGO ============================== */
+@font-face {
+    font-family: 'Newton-Howard-Italic';
+    src: url(../fonts/newton_howard/Newton-Howard-Font-Italic.otf);
+}
+
+@font-face {
+    font-family: 'Newton-Howard-Regular';
+    src: url(../fonts/newton_howard/Newton-Howard-Font.otf);
+}
+
 /* ============================== VARIABLES ============================== */
 
 :root {
@@ -24,12 +35,14 @@
     --color--medium: #400207;
     --color--dark: #260104;
     --color--links--nav: #00CDEF;
-    --color--border--nav: #270765;
+    --color--border--nav: #00CDEF;
 
     --font--good-times: 'GoodTimes', sans-serif;
     --font--astounder--lc: "astounder-squared-lc-bb", sans-serif;
     --font--astounder: "astounder-squared-bb", sans-serif;
     --font--DM-Sans: 'DM Sans', sans-serif;
+    --font--howard--italic: 'Newton-Howard-Italic', sans-serif;
+    --font--howard--regular: 'Newton-Howard-Regular', sans-serif;
 
     --title--shadow: .2rem .2rem .2rem var(--color--black);
 }
