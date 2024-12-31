@@ -3,6 +3,9 @@
 /* ============================== DM SANS ============================== */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
+/* ============================== ROBOTO ============================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /* ============================== GOOD TIMES - VAMOS A BAILAR ============================== */
 @font-face {
     font-family: GoodTimes;
@@ -43,6 +46,7 @@
     --font--DM-Sans: 'DM Sans', sans-serif;
     --font--howard--italic: 'Newton-Howard-Italic', sans-serif;
     --font--howard--regular: 'Newton-Howard-Regular', sans-serif;
+    --font--roboto: 'Roboto','DM Sans', sans-serif;
 
     --title--shadow: .2rem .2rem .2rem var(--color--black);
 }

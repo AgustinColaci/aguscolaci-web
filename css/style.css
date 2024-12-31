@@ -1,6 +1,6 @@
 /* ============================== CUSTOM STYLES ============================== */
 body {
-    background-image: url(../images/background-vab.png);
+    background-color: var(--color--black);
 }
 
 /* ============================== CONTAINER ============================== */
@@ -8,16 +8,10 @@ body {
 .container {
     margin: 0 auto;
     text-align: center;
-    padding-top: 2.4rem;
 }
 
 /* Media query to target mobile and tablet */
-@media all and (max-width:1140px) {
-    .container {
-        padding-top: 2rem;
-    }
-
-}
+@media all and (max-width:1140px) {}
 
 /* ============================== HEADER AND NAVBAR ============================== */
 .header-black {
@@ -29,6 +23,10 @@ body {
     padding-right: 2rem;
     display: flex;
     justify-content: space-between;
+    border-bottom: .2rem solid var(--color--white);
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .logo__img {
@@ -63,11 +61,11 @@ body {
 
 .navbar .link {
     text-transform: uppercase;
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 500;
     color: var(--color--white);
     text-shadow: .1rem .1rem .2rem var(--color--black);
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font--roboto);
 }
 
 .link.link--active {
@@ -78,7 +76,7 @@ body {
 /* Media query to target mobile and tablet */
 @media all and (max-width:1140px) {
     .navbar .navbar__list {
-        gap: 1rem;
+        gap: .6rem;
         margin-bottom: 0;
     }
 
@@ -107,15 +105,39 @@ body {
     }
 }
 
+/* BACKGROUND LANDING */
+
+.section--bg {
+    background-image: url(../images/encadenado.JPG);
+    background-size: cover;
+    height: calc(100vh - 8rem);
+    margin-top: 8rem;
+}
+
+/* Media query to target only mobile */
+@media all and (max-width:750px) {
+    .section--bg {
+        background-position: center;
+    }
+}
 
 /* ============================== LANZAMIENTOS ============================== */
 
 .lanzamientos {
+    background-color: var(--color--black);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    border-top: .2rem solid var(--color--white);
+    border-bottom: .2rem solid var(--color--white);
+}
+
+.lanzamientos__content {
     margin-bottom: 5rem;
     display: flex;
+    gap: 4rem;
     justify-content: center;
     align-items: center;
-}
+} 
 
 .portada-vab {
     height: 40rem;
@@ -161,7 +183,7 @@ body {
 
 
 .call-to-action__button p {
-    background-color: var(--color--black);
+    background-color: var(--color--lighter);
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 1rem;
@@ -181,10 +203,20 @@ body {
     margin-right: auto;
     border: .1rem solid var(--color--white);
     width: 18rem;
+    max-width: 18rem;
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
     border-radius: 2rem;
     font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color--black);
+    background-color: var(--color--white);
+    transition: all .3s;
+}
+
+.escuchar-ahora:hover .link {
+    background-color: var(--color--lighter);
+    color: var(--color--white);
 }
 
 /* Media query to target only mobile */
@@ -207,8 +239,227 @@ body {
         margin-bottom: 2rem;
     }
 
-    .escuchar-ahora .link {
-        background-color: var(--color--lighter);
+    .lanzamientos__content {
+        flex-direction: column;
+    }
+}
+
+/* ============================== SHOWS ============================== */
+
+.shows {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--color--white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.shows__cards {
+    margin: 4rem;
+}
+
+.shows__title {
+    text-align: center;
+    color: var(--color--black);
+    font-size: 6rem;
+    font-family: var(--font--astounder--lc);
+    text-transform: uppercase;
+}
+
+.shows__item {
+    color: var(--color--black);
+    border-top: .2rem dotted var(--color--black);
+    border-bottom: .2rem dotted var(--color--black);
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.show__content--mes, .show__item--day, .show__item--year, .show__item--venue, .show__item--entradas, .show__item--pais, .show__formato {
+    color: var(--color--black);
+}
+
+.show__content--mes {
+    font-size: 4rem;
+    margin-left: 4rem;
+}
+
+.show__fecha {
+    height: 12rem;
+    width: 12rem;
+    border-top: 1.8rem solid #de4907;
+    background-color: var(--color--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.show__item--day {
+    color: var(--color--white);
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.show__item--year {
+    font-size: 1.4rem;
+    color: #de4907;
+    font-weight: 700;
+}
+
+.show__item--venue {
+    background-image: url(../images/location.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 2rem;
+    font-size: 2rem;
+    font-weight: 400;
+    padding-left: 2.4rem;
+}
+
+.show__item--entradas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .1rem solid var(--color--black);
+    width: fit-content;
+    height: 3rem;
+    font-size: 1.4rem;
+    transition: all .3s;
+    text-transform: uppercase;
+    border-color: #de4907;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    cursor: pointer;
+}
+
+.show__item--entradas:hover {
+    border-color: var(--color--black);
+    color: var(--color--white);
+    background-color: #de4907;
+}
+
+.show__ubicacion {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.show__item--pais {
+    color: #79859e;
+    font-size: 1.4rem;
+}
+
+.show__formato {
+    color: #999999;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.show__item--venue {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+/* Media query to target only desktop */
+@media all and (min-width:1025px) {}
+
+/* Media query to target only mobile */
+@media all and (max-width:750px) {
+    .shows__item {
+        margin-left: 1.2rem;
+        padding-left: 2.2rem;
+        font-size: 2rem;
+        background-size: 2rem;
+    }
+
+    .shows {
+        margin: 4rem;
+    }
+
+    .shows__cards {
+        margin: 0;
+    }
+
+    .shows__title {
+        font-size: 4rem;
+    }
+
+    .show__content--mes {
+        font-size: 2.4rem;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .shows__item {
+        padding: 1.2rem;
+        margin: 0;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .show__item--venue {
+        font-size: 1.8rem;
+    }
+
+    .show__item--entradas {
+        border-color: var(--color--black);
+        color: var(--color--white);
+        background-color: #de4907;
+    }
+
+    .show__ubicacion {
+        gap: .6rem;
+    }
+
+    .show__fecha {
+        width: 100%;
+    }
+
+    .redes__section {
+        gap: 2rem;
+    }
+
+    #redes.redes {
+        height: 20rem;
+    }
+}
+
+/* ============================== REDES ============================== */
+
+.redes {
+    border: .2rem solid var(--color--white);
+    background-image: url(../images/bg-cuervo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30rem;
+    margin-bottom: 2rem;
+}
+
+.redes__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 4rem;
+}
+
+.redes__section .links--instagram, .redes__section .links--twitter, .redes__section .links--tiktok, .redes__section .links--spotify, .redes__section .links--youtube, .redes__section .links--twitch {
+    width: 4rem;
+    height: 4rem;
+}
+
+/* Media query to target only mobile */
+@media all and (max-width:750px) {
+    .redes__section {
+        gap: 2rem;
+    }
+
+    #redes.redes {
+        height: 20rem;
     }
 }
 
@@ -223,8 +474,6 @@ body {
     background-color: var(--color--black);
     text-align: center;
     border-top: .2rem solid var(--color--white);
-    position: fixed;
-    bottom: 0;
 }
 
 .footer__logo {
@@ -387,11 +636,12 @@ body {
     margin-bottom: 4rem;
 }
 
-.discografia__title, .shows__item {
+.discografia__title {
     font-size: 4rem;
     text-align: left;
-    font-family: var(--font--astounder--lc);
+    font-family: var(--font--roboto);
     text-shadow: var(--title--shadow);
+    font-weight: 400;
     margin-left: 18rem;
     margin-bottom: 1.2rem;
     display: flex;
@@ -399,8 +649,7 @@ body {
     gap: .8rem;
 }
 
-.discografia__title .categoria.categoria--disco,
-.shows__item--type {
+.discografia__title .categoria.categoria--disco {
     font-size: 1.2rem;
     text-shadow: none;
     background-color: hsla(0,0%,100%,.7);
@@ -441,6 +690,69 @@ body {
     .discografia__title .categoria.categoria--disco {
         font-size: 1rem;
     }
+}
+
+/* ============================== DISCOS ============================== */
+
+.discos {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #060606;
+}
+
+.discos__list {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+}
+
+.discos__list--item {
+    height: 20rem;
+    width: 20rem;
+    border: .2rem solid var(--color--white);
+}
+
+.discos__list--item.vamos-a-bailar {
+    background-image: url(../images/portada-vab.png);
+    background-size: cover;
+}
+
+.discos__list--item.encadenado {
+    background-image: url(../images/portada-encadenado.png);
+    background-size: cover;
+}
+
+.discos__list--item.tomar-impulso {
+    background-image: url(../images/portada-tomar-impulso.jpg);
+    background-size: cover;
+}
+
+.discos__list--item.nada-facil {
+    background-image: url(../images/nada-facil-single.png);
+    background-size: cover;
+}
+
+.discos__list--item.indestructible {
+    background-image: url(../images/indestructible.jpeg);
+    background-size: cover;
+}
+
+.discos__list--item.hasta-el-final {
+    background-image: url(../images/hasta-el-final.jpeg);
+    background-size: cover;
+}
+
+.discos__list--item.por-el-cielo {
+    background-image: url(../images/por-el-cielo.jpg);
+    background-size: cover;
+}
+
+.discos__list--item.sigo-creyendo {
+    background-image: url(../images/sigo-creyendo.png);
+    background-size: cover;
 }
 
 /* ============================== COVERS ============================== */
@@ -605,45 +917,4 @@ body {
         font-size: 4rem;
     }
 
-}
-
-/* ============================== SHOWS ============================== */
-
-.shows__title {
-    font-size: 4rem;
-    font-family: var(--font--astounder--lc);
-    text-shadow: var(--title--shadow);
-}
-
-.shows__item {
-    margin-top: 1.2rem;
-    font-size: 4rem;
-    font-family: var(--font--astounder--lc);
-    text-shadow: var(--title--shadow);
-    gap: 2rem;
-    background-image: url(../images/location.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-size: 4rem;
-    background-position: left center;
-    padding-left: 5rem;
-}
-
-.shows__title--anteriores {
-    margin-top: 12rem;
-    border-top: .3rem solid var(--color--white);
-    padding-top: 4rem;
-}
-
-/* Media query to target only desktop */
-@media all and (min-width:1025px) {}
-
-/* Media query to target only mobile */
-@media all and (max-width:750px) {
-    .shows__item {
-        margin-left: 1.2rem;
-        padding-left: 2.2rem;
-        font-size: 2rem;
-        background-size: 2rem;
-    }
 }
